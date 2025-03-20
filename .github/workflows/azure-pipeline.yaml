@@ -21,4 +21,4 @@ jobs:
           choco install visualstudio2022buildtools --params "--add Microsoft.VisualStudio.Component.SQL.Data.Tools.BuildTools --includeRecommended --includeOptional" -y
 
       - name: Build
-        run: msbuild ./TesteSqlProject/TesteSqlProject.sqlproj /p:Configuration=Release
+        run: dotnet build ./TesteSqlProject/TesteSqlProject.sqlproj
